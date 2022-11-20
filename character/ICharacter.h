@@ -11,9 +11,9 @@ class ICharacter {
         ICharacter(shared_ptr<IRace> race) : m_race(race),
             m_health(0),
             m_className("N/A"),
-            m_armor(0),
+            m_armor(10),
             m_critChance(0),
-            m_initBonus(10) {};
+            m_initBonus(0) {};
 
         int getHealth() { return m_race->getHealth() + m_health; };
         int getArmor() { return m_race->getArmor() + m_armor; };

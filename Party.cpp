@@ -47,7 +47,7 @@ void Party::print(){
             string className = character->getClassName();
             string raceName = character->getRace()->getName();
 
-            cout << raceName << " " << className << endl;
+            cout << raceName << " " << className << " " << character->getInitBonus() << endl;
 
         }
 
