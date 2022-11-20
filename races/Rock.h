@@ -1,14 +1,21 @@
 #pragma once
 #include "IRace.h"
-#include "Rock.h"
 
 class Rock : public IRace
 {
 
 public:
-	Rock() : IRace("Rock", {"Lizard", "Scissors"}, {"Paper", "Spock"}, 0, 0, 0, 0)
+	Rock() : IRace()
 	{
+		m_raceName = "Rock";
 
-	}
-    virtual ~Rock() {}
+		m_health = 0;
+		m_critChance = 0;
+		m_armor = 0;
+		m_initBonus = 0;
+
+		m_strengths = {"Lizard", "Scissors"};
+		m_weaknesses = {"Paper", "Spock"};
+	};
+    virtual ~Rock() {};
 };
