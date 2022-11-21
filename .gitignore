@@ -1,7 +1,5 @@
 build
 Doxyfile
-html
-latex
 
 # Prerequisites
 *.d
