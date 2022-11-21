@@ -1,113 +1,41 @@
 \hypertarget{classParty}{}\doxysection{Party Class Reference}
 \label{classParty}\index{Party@{Party}}
-
-
-{\ttfamily \#include $<$Party.\+h$>$}
-
-
-
-Collaboration diagram for Party\+:
-% FIG 0
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classParty_a91c775a98abcc623128b924f74d54ab9}{Party}} (string name)
-\item 
-\mbox{\hyperlink{classParty_a85aa837e38a06690e6fee5087d7c7ad7}{$\sim$\+Party}} ()
-\item 
-void \mbox{\hyperlink{classParty_ad24d2fc794e08ffc6dfc3cd0d16b3e4b}{add}} (shared\+\_\+ptr$<$ ICharacter $>$, int)
-\item 
-void \mbox{\hyperlink{classParty_ad47ca16c2492d86e62013331fb427c90}{print}} ()
-\item 
-bool \mbox{\hyperlink{classParty_afdd8bc0d3c0a8fc5102d6d5fcd7060b8}{is\+Dead}} ()
-\item 
-string \mbox{\hyperlink{classParty_a7b9b40310322dd3e52127be02f84f0ff}{get\+Name}} ()
-\item 
-vector$<$ shared\+\_\+ptr$<$ ICharacter $>$ $>$ \mbox{\hyperlink{classParty_a4123bdf078f044200ff3924f1ba5f6ff}{get\+Row}} (int)
-\item 
-vector$<$ shared\+\_\+ptr$<$ ICharacter $>$ $>$ \mbox{\hyperlink{classParty_ac7b6b53855cb626a52ea2fa8bc9a7b8d}{get\+Characters}} ()
-\item 
-vector$<$ shared\+\_\+ptr$<$ ICharacter $>$ $>$ \mbox{\hyperlink{classParty_a54a965046a1d723b8674938104ee1518}{get\+Alive\+Characters}} ()
-\item 
-vector$<$ shared\+\_\+ptr$<$ ICharacter $>$ $>$ \mbox{\hyperlink{classParty_ab886e8343c9971a76f5b8cc905390df5}{sort\+Characters\+By\+Init}} ()
-\item 
-shared\+\_\+ptr$<$ ICharacter $>$ \mbox{\hyperlink{classParty_ab7553ef8ec07cdad4b45f2a0c5c94f6a}{pick\+Random\+Exposed}} ()
-\end{DoxyCompactItemize}
-
-
-\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classParty_a91c775a98abcc623128b924f74d54ab9}\label{classParty_a91c775a98abcc623128b924f74d54ab9}} 
-\index{Party@{Party}!Party@{Party}}
-\index{Party@{Party}!Party@{Party}}
-\doxysubsubsection{\texorpdfstring{Party()}{Party()}}
-{\footnotesize\ttfamily Party\+::\+Party (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classParty_a85aa837e38a06690e6fee5087d7c7ad7}\label{classParty_a85aa837e38a06690e6fee5087d7c7ad7}} 
-\index{Party@{Party}!````~Party@{$\sim$Party}}
-\index{````~Party@{$\sim$Party}!Party@{Party}}
-\doxysubsubsection{\texorpdfstring{$\sim$Party()}{~Party()}}
-{\footnotesize\ttfamily Party\+::$\sim$\+Party (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-\doxysubsection{Member Function Documentation}
+{\bfseries Party} (string name)
+\item 
 \mbox{\Hypertarget{classParty_ad24d2fc794e08ffc6dfc3cd0d16b3e4b}\label{classParty_ad24d2fc794e08ffc6dfc3cd0d16b3e4b}} 
-\index{Party@{Party}!add@{add}}
-\index{add@{add}!Party@{Party}}
-\doxysubsubsection{\texorpdfstring{add()}{add()}}
-{\footnotesize\ttfamily void Party\+::add (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ ICharacter $>$}]{character,  }\item[{int}]{row }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classParty_a54a965046a1d723b8674938104ee1518}\label{classParty_a54a965046a1d723b8674938104ee1518}} 
-\index{Party@{Party}!getAliveCharacters@{getAliveCharacters}}
-\index{getAliveCharacters@{getAliveCharacters}!Party@{Party}}
-\doxysubsubsection{\texorpdfstring{getAliveCharacters()}{getAliveCharacters()}}
-{\footnotesize\ttfamily vector$<$ shared\+\_\+ptr$<$ ICharacter $>$ $>$ Party\+::get\+Alive\+Characters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classParty_ac7b6b53855cb626a52ea2fa8bc9a7b8d}\label{classParty_ac7b6b53855cb626a52ea2fa8bc9a7b8d}} 
-\index{Party@{Party}!getCharacters@{getCharacters}}
-\index{getCharacters@{getCharacters}!Party@{Party}}
-\doxysubsubsection{\texorpdfstring{getCharacters()}{getCharacters()}}
-{\footnotesize\ttfamily vector$<$ shared\+\_\+ptr$<$ ICharacter $>$ $>$ Party\+::get\+Characters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classParty_a7b9b40310322dd3e52127be02f84f0ff}\label{classParty_a7b9b40310322dd3e52127be02f84f0ff}} 
-\index{Party@{Party}!getName@{getName}}
-\index{getName@{getName}!Party@{Party}}
-\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
-{\footnotesize\ttfamily string Party\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classParty_a4123bdf078f044200ff3924f1ba5f6ff}\label{classParty_a4123bdf078f044200ff3924f1ba5f6ff}} 
-\index{Party@{Party}!getRow@{getRow}}
-\index{getRow@{getRow}!Party@{Party}}
-\doxysubsubsection{\texorpdfstring{getRow()}{getRow()}}
-{\footnotesize\ttfamily vector$<$shared\+\_\+ptr$<$ICharacter$>$ $>$ Party\+::get\+Row (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classParty_afdd8bc0d3c0a8fc5102d6d5fcd7060b8}\label{classParty_afdd8bc0d3c0a8fc5102d6d5fcd7060b8}} 
-\index{Party@{Party}!isDead@{isDead}}
-\index{isDead@{isDead}!Party@{Party}}
-\doxysubsubsection{\texorpdfstring{isDead()}{isDead()}}
-{\footnotesize\ttfamily bool Party\+::is\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classParty_ab7553ef8ec07cdad4b45f2a0c5c94f6a}\label{classParty_ab7553ef8ec07cdad4b45f2a0c5c94f6a}} 
-\index{Party@{Party}!pickRandomExposed@{pickRandomExposed}}
-\index{pickRandomExposed@{pickRandomExposed}!Party@{Party}}
-\doxysubsubsection{\texorpdfstring{pickRandomExposed()}{pickRandomExposed()}}
-{\footnotesize\ttfamily shared\+\_\+ptr$<$ ICharacter $>$ Party\+::pick\+Random\+Exposed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
+void {\bfseries add} (shared\+\_\+ptr$<$ ICharacter $>$, int)
+\item 
 \mbox{\Hypertarget{classParty_ad47ca16c2492d86e62013331fb427c90}\label{classParty_ad47ca16c2492d86e62013331fb427c90}} 
-\index{Party@{Party}!print@{print}}
-\index{print@{print}!Party@{Party}}
-\doxysubsubsection{\texorpdfstring{print()}{print()}}
-{\footnotesize\ttfamily void Party\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
+void {\bfseries print} ()
+\item 
+\mbox{\Hypertarget{classParty_afdd8bc0d3c0a8fc5102d6d5fcd7060b8}\label{classParty_afdd8bc0d3c0a8fc5102d6d5fcd7060b8}} 
+bool {\bfseries is\+Dead} ()
+\item 
+\mbox{\Hypertarget{classParty_a7b9b40310322dd3e52127be02f84f0ff}\label{classParty_a7b9b40310322dd3e52127be02f84f0ff}} 
+string {\bfseries get\+Name} ()
+\item 
+\mbox{\Hypertarget{classParty_a4123bdf078f044200ff3924f1ba5f6ff}\label{classParty_a4123bdf078f044200ff3924f1ba5f6ff}} 
+vector$<$ shared\+\_\+ptr$<$ ICharacter $>$ $>$ {\bfseries get\+Row} (int)
+\item 
+\mbox{\Hypertarget{classParty_ac7b6b53855cb626a52ea2fa8bc9a7b8d}\label{classParty_ac7b6b53855cb626a52ea2fa8bc9a7b8d}} 
+vector$<$ shared\+\_\+ptr$<$ ICharacter $>$ $>$ {\bfseries get\+Characters} ()
+\item 
+\mbox{\Hypertarget{classParty_a54a965046a1d723b8674938104ee1518}\label{classParty_a54a965046a1d723b8674938104ee1518}} 
+vector$<$ shared\+\_\+ptr$<$ ICharacter $>$ $>$ {\bfseries get\+Alive\+Characters} ()
+\item 
 \mbox{\Hypertarget{classParty_ab886e8343c9971a76f5b8cc905390df5}\label{classParty_ab886e8343c9971a76f5b8cc905390df5}} 
-\index{Party@{Party}!sortCharactersByInit@{sortCharactersByInit}}
-\index{sortCharactersByInit@{sortCharactersByInit}!Party@{Party}}
-\doxysubsubsection{\texorpdfstring{sortCharactersByInit()}{sortCharactersByInit()}}
-{\footnotesize\ttfamily vector$<$ shared\+\_\+ptr$<$ ICharacter $>$ $>$ Party\+::sort\+Characters\+By\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
+vector$<$ shared\+\_\+ptr$<$ ICharacter $>$ $>$ {\bfseries sort\+Characters\+By\+Init} ()
+\item 
+\mbox{\Hypertarget{classParty_ab7553ef8ec07cdad4b45f2a0c5c94f6a}\label{classParty_ab7553ef8ec07cdad4b45f2a0c5c94f6a}} 
+shared\+\_\+ptr$<$ ICharacter $>$ {\bfseries pick\+Random\+Exposed} ()
+\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{Party_8h}{Party.\+h}}\item 
-\mbox{\hyperlink{Party_8cpp}{Party.\+cpp}}\end{DoxyCompactItemize}
+Party.\+h\item 
+Party.\+cpp\end{DoxyCompactItemize}
