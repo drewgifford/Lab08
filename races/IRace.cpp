@@ -20,6 +20,7 @@ int IRace::getInitBonus(){
     return m_initBonus;
 }
 
+// We use this to print out "Rock beats Scissors" and stuff like that
 string IRace::getSpecialMessage(string target){
     return "";
 }

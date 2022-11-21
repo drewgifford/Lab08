@@ -28,9 +28,11 @@ class ICharacter {
         void removeHealth(int hp) { m_health -= hp; };
 
         void printInfo(bool endLine) {
+            // Print out a line of the character's race, class, and health
             cout << m_race->getName() << " " << m_className << " (" << m_health << " HP)";
 
             if (endLine){
+                // If endLine is true, end the line.
                 cout << endl;
             }
         }
