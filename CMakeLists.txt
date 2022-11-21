@@ -1,8 +1,9 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.10)
 
 # Locate GTest
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
+
 
 add_library(applibrary CharacterFactory.cpp races/IRace.cpp character/ICharacter.cpp Party.cpp Util.cpp) 
 

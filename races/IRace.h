@@ -21,6 +21,8 @@ class IRace {
         vector<string> getWeaknesses() { return m_weaknesses; }
         string getName() { return m_raceName; }
 
+        virtual string getSpecialMessage(string target);
+
     protected:
         int m_health;
         int m_armor;

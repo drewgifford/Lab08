@@ -8,10 +8,11 @@ public:
 	Mage(std::shared_ptr<IRace> race) : ICharacter(race)
 	{
         m_className = "Mage";
-        m_health = 60;
-        m_critChance = 40;
-        m_armor = 20;
-        m_initBonus = 2;
+        m_health = 60 + m_race->getHealth();
+        m_critChance = 40 + m_race->getCritChance();
+        m_armor = 4 + m_race->getArmor();
+        m_initBonus = 2 + m_race->getInitBonus();
+        m_die = 30;
 
 	}
 

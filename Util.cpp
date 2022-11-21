@@ -1,31 +1,80 @@
-#include <stdio.h>
-#include <termios.h>
-#include <unistd.h>
-#include <fcntl.h>
+#include "character/ICharacter.h"
+#include "Party.h"
+#include "CharacterFactory.h"
 
-int kbhit()
-{
-  struct termios oldt, newt;
-  int ch;
-  int oldf;
+#include <memory>
+#include <chrono>
+#include <string>
+#include <random>
 
-  tcgetattr(STDIN_FILENO, &oldt);
-  newt = oldt;
-  newt.c_lflag &= ~(ICANON | ECHO);
-  tcsetattr(STDIN_FILENO, TCSANOW, &newt);
-  oldf = fcntl(STDIN_FILENO, F_GETFL, 0);
-  fcntl(STDIN_FILENO, F_SETFL, oldf | O_NONBLOCK);
+using namespace std;
 
-  ch = getchar();
+shared_ptr<ICharacter> createCharacter(int c, int r, CharacterFactory & factory){
 
-  tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-  fcntl(STDIN_FILENO, F_SETFL, oldf);
+    CharacterType ct;
+    RaceType rt;
 
-  if(ch != EOF)
-  {
-    ungetc(ch, stdin);
-    return 1;
-  }
+    switch(c){
+        case 0:
+            ct = CharacterType::ClassGrandma;
+            break;
+        case 1:
+            ct = CharacterType::ClassMage;
+            break;
+        case 2:
+            ct = CharacterType::ClassPeasant;
+            break;
+        case 3:
+            ct = CharacterType::ClassSlimeRancher;
+            break;
+        case 4:
+            ct = CharacterType::ClassTank;
+            break;
+        default:
+            throw "error";
+    }
 
-  return 0;
+    switch(r){
+        case 0:
+            rt = RaceType::RaceRock;
+            break;
+        case 1:
+            rt = RaceType::RacePaper;
+            break;
+        case 2:
+            rt = RaceType::RaceScissors;
+            break;
+        case 3:
+            rt = RaceType::RaceLizard;
+            break;
+        case 4:
+            rt = RaceType::RaceSpock;
+            break;
+        default:
+            throw "error";
+    }
+
+    return factory.CreateCharacter(ct, rt);
+
+
+}
+
+Party createParty(CharacterFactory & factory, string name){
+
+    unsigned seed = chrono::system_clock::now().time_since_epoch().count();
+
+    default_random_engine generator(seed);
+    uniform_int_distribution<int> distribution(0,4);
+
+    Party party(name);
+
+
+    for(int i = 0; i <= 1; i++){
+        for(int j = 0; j <= 1; j++){
+            party.add(createCharacter(distribution(generator), distribution(generator), factory), i);
+        }
+    }
+
+    return party;
+
 }
