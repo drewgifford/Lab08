@@ -27,7 +27,7 @@ public:
 		if(target == "Paper"){
 			return "Scissors cuts Paper";
 		}
-		else if (target == "Rock"){
+		else if (target == "Lizard"){
 			return "Scissors decapitates Lizard";
 		}
 		return "";
